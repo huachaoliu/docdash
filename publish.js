@@ -426,7 +426,8 @@ function linktoExternal(longName, name) {
  */
 
 function buildNav(members) {
-    var nav = '<h2><a href="index.html">Home</a></h2>';
+    var href = env.conf.docdash.home || 'index.html'
+    var nav = '<h2><a href="' + href + '">Home</a></h2>';
     var seen = {};
     var seenTutorials = {};
     var docdash = env && env.conf && env.conf.docdash || {};
